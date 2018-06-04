@@ -7703,22 +7703,24 @@ header {
   left: 0;
   z-index: 1000; }
   @media (min-width: 1200px) {
-    header.minimal .sitelogo {
-      height: 80px;
-      -webkit-transition: all, 0.3s;
-      -khtml-transition: all, 0.3s;
-      -moz-transition: all, 0.3s;
-      -ms-transition: all, 0.3s;
-      -o-transition: all, 0.3s;
-      transition: all, 0.3s; }
-    header.minimal .col-right .social, header.minimal .col-right .language {
-      margin-bottom: 0;
-      -webkit-transition: all, 0.5s;
-      -khtml-transition: all, 0.5s;
-      -moz-transition: all, 0.5s;
-      -ms-transition: all, 0.5s;
-      -o-transition: all, 0.5s;
-      transition: all, 0.5s; } }
+    header.minimal {
+      box-shadow: 0px 5px 10px rgba(5, 5, 5, 0.1); }
+      header.minimal .sitelogo {
+        height: 80px;
+        -webkit-transition: all, 0.3s;
+        -khtml-transition: all, 0.3s;
+        -moz-transition: all, 0.3s;
+        -ms-transition: all, 0.3s;
+        -o-transition: all, 0.3s;
+        transition: all, 0.3s; }
+      header.minimal .col-right .social, header.minimal .col-right .language {
+        margin-bottom: 0;
+        -webkit-transition: all, 0.5s;
+        -khtml-transition: all, 0.5s;
+        -moz-transition: all, 0.5s;
+        -ms-transition: all, 0.5s;
+        -o-transition: all, 0.5s;
+        transition: all, 0.5s; } }
   header .header-wrap {
     display: -webkit-box;
     display: -webkit-flex;
