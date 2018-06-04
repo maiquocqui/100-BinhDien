@@ -1,0 +1,116 @@
+body
+	padding-top: 110px
+header
+	background: url(../img/headerbg.jpg) center center repeat
+	+pos(fix, 0 0 null 0)
+	z-index: 1000
+	&.minimal
+		+media-breakpoint-up(xl)
+			.sitelogo
+				height: 80px
+				+transition(all,0.3s)
+			.col-right
+				.social, .language
+					margin-bottom: 0
+					+transition(all,0.5s)
+	.header-wrap
+		+flexbox
+		// flex-wrap: wrap
+		justify-content: space-between
+		align-items: center
+		align-content: center
+	.sitelogo
+		height: 110px
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		a
+			display: block
+		img
+	.col-right
+		flex: auto
+		+flexbox
+		flex-wrap: wrap
+		justify-content: flex-end
+		align-items: center
+		align-content: center
+	.social
+		+flexbox
+		align-items: center
+		align-content: center
+		background: $yellow
+		height: 30px
+		+bor-rad(5px)
+		margin-bottom: 10px
+		a
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			+pos(rel,null)
+			+fs(18rem)
+			height: 14px
+			color: $blue
+			width: 45px
+			+ a
+				border-left: 1px solid $blue
+	.language
+		margin-left: 10px
+		margin-bottom: 10px
+		.dropdown-toggle
+			+fs(14rem)
+			color: $blue
+			background: darken($white,20%)
+			line-height: 20px
+			padding: 5px 15px
+			+bor-rad(5px)
+			&:after
+				content: '\f107'
+				width: auto
+				height: auto
+				border: none
+				display: inline
+				vertical-align: middle
+				line-height: 1
+	.btn-showmenu
+		display: none
+	.overlay
+		display: none
+	.menu
+		// width: 100%
+		+flexbox
+		flex-wrap: wrap
+		align-items: center
+		align-content: center
+		.menu-logo
+			display: none
+			// width: 100%
+		.menu-wrap
+			// width: 100%
+		ul.menu-link
+			+flexbox
+			li
+				+ li
+					margin-left: 45px
+				a
+					+fs(15rem)
+					font-weight: 500
+					text-transform: uppercase
+					color: $blue
+					display: block
+					padding: 5px 0
+					border-bottom: 1px solid transparent
+					&:hover
+						color: $yellow
+				&.active
+					a
+						color: $yellow
+						border-bottom-color: $yellow
+		.search
+			margin-left: 45px
+			.search-toggle
+				+fs(18rem)
+				color: $blue
+			.search-wrap
+				display: none
