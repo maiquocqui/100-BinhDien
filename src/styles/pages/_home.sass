@@ -3,6 +3,8 @@
 	font-weight: 600
 	color: $blue
 	margin-bottom: 30px
+	+media-breakpoint-down(sm)
+		+fs(24rem)
 	+ .nav-wrap
 		margin-top: -15px
 
@@ -20,13 +22,24 @@
 		color: $blue
 		margin-bottom: 15px
 		margin-left: -80px
+		+media-breakpoint-down(sm)
+			margin-left: 0
+			+fs(28rem)
 	.about-wrap
+		+media-breakpoint-down(lg)
+			max-width: 800px
+			margin: 0 auto
 	.about-intro
 		background: url(../img/hbg2.jpg) center center no-repeat
 		background-size: cover
 		width: 720px
 		padding: 40px 150px
 		float: left
+		+media-breakpoint-down(lg)
+			width: 100%
+			float: none
+		+media-breakpoint-down(sm)
+			padding: 20px
 		.content
 			margin-bottom: 20px
 			&:before
@@ -42,6 +55,10 @@
 		+pos(rel,null)
 		z-index: 1
 		margin-top: -320px
+		+media-breakpoint-down(lg)
+			margin-top: 0
+			float: none
+			width: 100%
 	.about-video
 		&:before
 			content: '\f01d'
@@ -54,6 +71,10 @@
 			justify-content: center
 			align-items: center
 			align-content: center
+	.btn-wrap
+		+media-breakpoint-down(sm)
+			text-align: center
+
 
 .btn-wrap
 	.btn-viewmore
@@ -133,11 +154,19 @@
 	.qc-list
 		.row
 			margin: 0px -11px
+			+media-breakpoint-down(lg)
+				margin: 0px -8px
 		.col-12
 			padding: 0px 11px
+			+media-breakpoint-down(lg)
+				padding: 0px 8px
 		.qc-img
 			display: block
 			margin-bottom: 22px
+			+media-breakpoint-down(lg)
+				margin-bottom: 16px
+			img
+				width: 100%
 	.qc-slide
 		margin-bottom: 22px
 		.slick-dots
@@ -201,6 +230,8 @@
 			align-content: center
 			border: 1px solid darken($white,10%)
 			margin-bottom: 20px
+			+media-breakpoint-down(lg)
+				height: 100px
 			img
 				max-width: 70%
 				max-width: 70%

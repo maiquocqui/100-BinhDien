@@ -6,6 +6,11 @@
 				+pos(rel,null)
 				img
 					width: 100%
+					+media-breakpoint-down(md)
+						height: 500px
+						object-fit: cover
+					+media-breakpoint-down(sm)
+						height: 350px
 				&:before
 					content: ''
 					+pos(abs, 0 0 null 0)
@@ -34,6 +39,10 @@
 				border: 5px solid transparent
 				+transition(all,0.5s)
 				+pos(rel,null)
+				+media-breakpoint-down(md)
+					padding: 5px 10px 15px
+				+media-breakpoint-down(sm)
+					width: 250px
 				&:before
 					content: ''
 					display: block
@@ -79,12 +88,16 @@
 					+fs(80rem)
 					line-height: 1
 					font-weight: 800
+					+media-breakpoint-down(md)
+						+fs(60rem)
 				.cate-des
 					+fs(14rem)
 					font-weight: 300
 			&.slick-current
 				.cate
 					+transform(translateY(-20px))
+					+media-breakpoint-down(md)
+						+transform(translateY(0))
 					&:before
 						visibility: visible
 						opacity: 1
