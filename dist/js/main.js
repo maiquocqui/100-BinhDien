@@ -256,14 +256,14 @@ $(document).ready(function () {
     });
 
     // top nav fixed
-    $('.top-nav ul').scrollToFixed({
-        marginTop: 60,
+    $('.top-nav ').scrollToFixed({
+        marginTop: 80,
         zIndex: 100
     });
 
     // Page scroll to id
     $('.top-nav a').mPageScroll2id({
-        offset: 120,
+        offset: 110,
         // highlightClass: 'active',
         forceSingleHighlight: true
     });
