@@ -26,9 +26,10 @@
 			margin-left: 0
 			+fs(28rem)
 	.about-wrap
+		max-width: 1300px
+		margin: 0 auto
 		+media-breakpoint-down(lg)
 			max-width: 800px
-			margin: 0 auto
 	.about-intro
 		background: url(../img/hbg2.jpg) center center no-repeat
 		background-size: cover
@@ -126,6 +127,8 @@
 					width: 100%
 					+bor-rad(5px)
 					overflow: hidden
+					img
+						width: 100%
 				figcaption
 					padding: 15px 0
 					+flexbox

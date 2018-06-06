@@ -54,31 +54,36 @@ $(document).ready(function () {
         dots: false,
         autoplay: true,
         autoplaySpeed: 5000,
+        infinite: false,
         asNavFor: '.banner-nav'
     });
     $('.banner-nav').slick({
         slidesToShow: 7,
-        slidesToScroll: 1,
+        slidesToScroll: 7,
         asNavFor: '.banner-slide',
         dots: false,
         arrows: false,
+        infinite: false,
         // centerMode: true,
         focusOnSelect: true,
         // centerPadding: 0,
         responsive: [{
             breakpoint: 1199,
             settings: {
-                slidesToShow: 6
+                slidesToShow: 6,
+                slidesToScroll: 1
             }
         }, {
             breakpoint: 991,
             settings: {
-                slidesToShow: 4
+                slidesToShow: 4,
+                slidesToScroll: 1
             }
         }, {
             breakpoint: 767,
             settings: {
                 slidesToShow: 2,
+                slidesToScroll: 1,
                 variableWidth: true
             }
         }]

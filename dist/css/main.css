@@ -6729,8 +6729,7 @@ main.big {
   -moz-transition: all, 0.3s;
   -ms-transition: all, 0.3s;
   -o-transition: all, 0.3s;
-  transition: all, 0.3s;
-  position: static; }
+  transition: all, 0.3s; }
 
 .col-12 {
   width: 100%; }
@@ -8339,10 +8338,12 @@ footer {
       .home-about .about-title {
         margin-left: 0;
         font-size: 1.75rem; } }
-  @media (max-width: 1199.98px) {
-    .home-about .about-wrap {
-      max-width: 800px;
-      margin: 0 auto; } }
+  .home-about .about-wrap {
+    max-width: 1300px;
+    margin: 0 auto; }
+    @media (max-width: 1199.98px) {
+      .home-about .about-wrap {
+        max-width: 800px; } }
   .home-about .about-intro {
     background: url(../img/hbg2.jpg) center center no-repeat;
     background-size: cover;
@@ -8452,6 +8453,8 @@ footer {
       width: 100%;
       border-radius: 5px;
       overflow: hidden; }
+      .home-news .news-list .news-col figure .news-img img {
+        width: 100%; }
     .home-news .news-list .news-col figure figcaption {
       padding: 15px 0;
       display: -webkit-box;
