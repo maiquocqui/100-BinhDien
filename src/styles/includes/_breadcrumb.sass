@@ -1,0 +1,35 @@
+.breadcrumb-wrap
+	+pos(rel,null)
+	.breadcrumb-bg
+	.breadcrumb-content
+		+pos(abs, 0 null 0 0)
+		right: 0
+		z-index: 5
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		text-align: center
+	.pagename
+		+fs(36rem)
+		color: $orange
+		margin-bottom: 15px
+		&:after
+			content: ''
+			display: block
+			width: 70px
+			height: 1px
+			background: $orange
+			margin: 10px auto 0
+	.breadcrumb
+		li
+			color: $white
+			&:before
+				content: '\f105'
+				margin: 0px 10px
+			&:first-child
+				&:before
+					display: none
+			a
+				+fs(15rem)
+				color: $white
