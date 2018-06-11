@@ -255,16 +255,27 @@ $(document).ready(function () {
         }
     });
 
-    // top nav fixed
-    $('.top-nav ').scrollToFixed({
-        marginTop: 80,
-        zIndex: 100
+    // Mobile nav toggle
+    $('.btn-navtoggle').click(function () {
+        $(this).toggleClass('active');
+        $(this).siblings('ul').slideToggle(500);
     });
 
+    // top nav fixed
+    if ($(window).width() > 767) {
+        $('.top-nav ').scrollToFixed({
+            marginTop: $('header').outerHeight(),
+            zIndex: 100
+        });
+    }
+
     // Page scroll to id
-    $('.top-nav a').mPageScroll2id({
+    $('.page-scroll a').mPageScroll2id({
         offset: 110,
         // highlightClass: 'active',
         forceSingleHighlight: true
     });
+
+    // Page name breadcrumb
+    $(".pagename").append($('.breadcrumb li a').eq(1).find('span').html());
 });
