@@ -1,8 +1,5 @@
 $(document).ready(function() {
     // header script
-    // $('header').scrollToFixed({
-    //     zIndex: 1000,
-    // });
 
     if ($(window).width() < 1200) {
         $('.search').insertAfter('.language');
@@ -30,13 +27,6 @@ $(document).ready(function() {
             $('header').removeClass('minimal');
         }
     });
-    // $(window).bind('scroll', function() {
-    //     if ($(window).scrollTop() > 200) {
-    //         $('header').addClass('minimal');
-    //     } else {
-    //         $('header').removeClass('minimal');
-    //     }
-    // });
 
     $('.search-toggle').click(function() {
         $(this).toggleClass('active');
@@ -160,96 +150,19 @@ $(document).ready(function() {
             // autoplaySpeed: 5000,
     });
 
-    // Project slide
-    $('.project-slide').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: false,
-        infinite: true
-    });
-
-    // Gallery slide
-    $('.gallery-slide').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        // infinite: false,
-        speed: 300,
-        dots: false,
-        arrows: true,
-        centerMode: true,
-        centerPadding: '200px',
-        responsive: [{
-                breakpoint: 1199,
-                settings: {
-                    centerPadding: '100px',
-                }
-            },
-            {
-                breakpoint: 991,
-                settings: {
-                    centerPadding: '80px',
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    centerPadding: '40px',
-                }
-            }
-        ]
-    });
-
-    // history slide
-    $('.history-event').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false,
-        fade: true,
-        asNavFor: '.history-slide'
-    });
-    $('.history-year').slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        asNavFor: '.history-slide',
-        focusOnSelect: true,
-        arrows: true,
-        dots: false,
-        responsive: [{
-                breakpoint: 1199,
-                settings: {
-                    slidesToShow: 5,
-                }
-            },
-            {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 4,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 2,
-                }
-            }
-        ]
-    });
-
     // Product slide
-    $('.product-slide').slick({
+    $('.cate-slide').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
         dots: false,
         fade: true,
-        asNavFor: '.product-nav'
+        asNavFor: '.cate-nav'
     });
-    $('.product-nav').slick({
-        slidesToShow: 4,
+    $('.cate-nav').slick({
+        slidesToShow: 5,
         slidesToScroll: 1,
-        asNavFor: '.product-slide',
+        asNavFor: '.cate-slide',
         dots: false,
         arrows: false,
         focusOnSelect: true
