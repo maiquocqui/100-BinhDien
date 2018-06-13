@@ -586,18 +586,19 @@ input[type="reset"]
 		justify-content: center
 		li
 			+ li
-				margin-left: 10px
+				// margin-left: 5px
 			a, span
 				width: 36px
 				height: 36px
 				+flexbox
 				justify-content: center
 				align-items: center
-				color: $main
-				+fs(20rem)
-				font-weight: 600
-				background: darken($white,10%)
-				+bor-rad(50px)
+				color: $blue
+				+fs(16rem)
+				// font-weight: 600
+				// background: darken($white,10%)
+				// +bor-rad(50px)
 			&.active
 				a, span
-					background: $yellow
+					background: $blue
+					color: $white

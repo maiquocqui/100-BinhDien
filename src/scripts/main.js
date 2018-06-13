@@ -181,6 +181,19 @@ $(document).ready(function() {
         }
     });
 
+    // FAQ toggle
+    $('.faq .faq-title').click(function() {
+        if ($(this).parent().hasClass('active') == true) {
+            $(this).parent().removeClass('active')
+            $(this).parent().find('.faq-content').slideUp(500);
+        } else {
+            $('.faq').removeClass('active');
+            $('.faq').find('.faq-content').slideUp(500);
+            $(this).parent().addClass('active')
+            $(this).parent().find('.faq-content').slideDown(500);
+        }
+    });
+
     // Mobile nav toggle
     $('.btn-navtoggle').click(function() {
         $(this).toggleClass('active');
@@ -188,7 +201,12 @@ $(document).ready(function() {
     })
 
     // top nav fixed
-    if ($(window).width() > 767) {
+    if ($(window).width() > 1199) {
+        $('.top-nav ').scrollToFixed({
+            marginTop: 80,
+            zIndex: 100,
+        });
+    } else {
         $('.top-nav ').scrollToFixed({
             marginTop: $('header').outerHeight(),
             zIndex: 100,
@@ -197,7 +215,7 @@ $(document).ready(function() {
 
     // Page scroll to id
     $('.page-scroll a').mPageScroll2id({
-        offset: 110,
+        offset: 120,
         // highlightClass: 'active',
         forceSingleHighlight: true,
     });
